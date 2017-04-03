@@ -11,16 +11,23 @@ class Role(models.Model):
     '''
     name = models.CharField(max_length=15)
     nick = models.CharField(max_length=15, unique=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class User(AbstractUser):
     '''
         This User extends from the Admin model User
     '''
-    role = models.ForeignKey(Role, on_delete=models.CASCADE)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE, default=2)
 
-    def get_role(self, name):
-        '''
-            Use this method to get the user Role,
-            check if he is Admin or just a common piece of shit.
-        '''
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    USERNAME_FIELD = 'username'
+
+    def has_role(self, name):
+        return User.objects.get(id=self.pk).role.nick == name
+
+    def get_role(self):
         return User.objects.get(id=self.pk).role.nick

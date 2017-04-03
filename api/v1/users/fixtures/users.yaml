@@ -6,4 +6,6 @@
     first_name: Admin
     last_name: Bets
     password: password123
+    created_at: "2017-04-03 14:00:00.000000-08:00"
+    updated_at: "2017-04-03 14:00:00.000000-08:00"
     role_id: 1

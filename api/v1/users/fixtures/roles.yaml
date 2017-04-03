@@ -3,9 +3,13 @@
   fields:
     name: Admin
     nick: admin
+    created_at: "2017-04-03 14:00:00.000000-08:00"
+    updated_at: "2017-04-03 14:00:00.000000-08:00"
     
 - model: users.Role
   pk: 2
   fields:
     name: User
     nick: user
+    created_at: "2017-04-03 14:00:00.000000-08:00"
+    updated_at: "2017-04-03 14:00:00.000000-08:00"

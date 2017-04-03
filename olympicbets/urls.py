@@ -17,7 +17,10 @@ from django.conf.urls import url, include
 
 from api.v1.router import api_urlpatterns as api_v1
 
+from rest_framework_jwt.views import obtain_jwt_token
+
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
     url(r'api/v1/', include(api_v1)),
+    url(r'api/login/', obtain_jwt_token)
 ]

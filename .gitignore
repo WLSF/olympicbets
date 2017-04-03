@@ -115,3 +115,6 @@ ENV/
 
 # mkdocs documentation
 /site
+
+*.tfstate
+*.tfstate.backup
