@@ -1,0 +1,11 @@
+- model: users.Role
+  pk: 1
+  fields:
+    name: Admin
+    nick: admin
+    
+- model: users.Role
+  pk: 2
+  fields:
+    name: User
+    nick: user

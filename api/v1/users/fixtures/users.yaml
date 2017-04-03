@@ -1,0 +1,9 @@
+- model: users.User
+  pk: 1
+  fields:
+    username: admin
+    email: admin@olympicbets.com
+    first_name: Admin
+    last_name: Bets
+    password: password123
+    role_id: 1
