@@ -38,7 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api.v1.users'
+    'api.v1.users',
+    'api.v1.bets',
+    'api.v1.games',
+    'api.v1.leagues',
+    'api.v1.regions',
+    'api.v1.sports',
+    'api.v1.teams',
+    'api.v1.accounts',
 ]
 
 MIDDLEWARE = [
@@ -151,4 +158,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
+}
+
+JWT_AUTH = {
+    'JWT_VERIFY': True,
+    'JWT_VERIFY_EXPIRATION': False,
 }
