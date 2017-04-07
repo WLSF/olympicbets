@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'api.v1.sports',
     'api.v1.teams',
     'api.v1.accounts',
+    'rest_framework',
+    'rest_framework_docs',
 ]
 
 MIDDLEWARE = [

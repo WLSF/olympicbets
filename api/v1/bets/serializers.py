@@ -19,3 +19,8 @@ class BetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bet
         fields = ('id', 'user', 'game', 'value', 'odd', 'bet_type', 'combined')
+
+class BetCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Bet
+        fields = ('id', 'user', 'game', 'value', 'odd', 'bet_type', 'combined')

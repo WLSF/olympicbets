@@ -12,3 +12,8 @@ class GameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
         fields = ('id', 'league', 'teams')
+
+class GameCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Game
+        fields = ('id', 'league', 'teams')

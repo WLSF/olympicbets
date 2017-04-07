@@ -20,3 +20,8 @@ class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
         fields = ('id', 'user', 'receiver', 'bet', 'transaction', 'description', 'history', 'value')
+
+class AccountCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Account
+        fields = ('id', 'user', 'receiver', 'bet', 'transaction', 'description', 'history', 'value')
