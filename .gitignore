@@ -118,3 +118,4 @@ ENV/
 
 *.tfstate
 *.tfstate.backup
+db.sqlite3

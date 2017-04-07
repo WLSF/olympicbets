@@ -15,7 +15,7 @@ class BetType(models.Model):
 class Bet(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
-    bettype = models.ForeignKey(BetType, on_delete=models.CASCADE)
+    bet_type = models.ForeignKey(BetType, on_delete=models.CASCADE)
 
     value = models.DecimalField(max_digits=10, decimal_places=2)
     odd = models.DecimalField(max_digits=4, decimal_places=2)

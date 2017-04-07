@@ -14,8 +14,8 @@ class BetTypeSerializer(serializers.ModelSerializer):
 class BetSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
     game = GameSerializer(read_only=True, many=True)   
-    bettype = BetTypeSerializer(read_only=True)
+    bet_type = BetTypeSerializer(read_only=True)
 
     class Meta:
         model = Bet
-        fields = ('id', 'user', 'game', 'value', 'odd', 'bettype', 'combined')
+        fields = ('id', 'user', 'game', 'value', 'odd', 'bet_type', 'combined')
