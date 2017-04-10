@@ -19,6 +19,7 @@ class User(AbstractUser):
     '''
         This User extends from the Admin model User
     '''
+    name = models.CharField(max_length=30)
     role = models.ForeignKey(Role, on_delete=models.CASCADE, default=2)
 
     created_at = models.DateTimeField(auto_now_add=True)
