@@ -9,6 +9,10 @@ provider "heroku" {
 resource "heroku_app" "default" {
     name    = "${var.heroku_app}"
     region  = "${var.heroku_region}"
+
+    config_vars = {
+        DEBUG = "False"
+    }
 }
 
 resource "heroku_addon" "database" {
