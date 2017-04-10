@@ -10,7 +10,9 @@ from api.v1.users.serializers import UserSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     '''
-        User ModelViewSet
+        This viewset allows to CRUD all the Users of the system.
+
+        The users created can be regular or admin.
     '''
 
     queryset = User.objects.all()

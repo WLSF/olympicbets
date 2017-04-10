@@ -9,6 +9,9 @@ from api.v1.leagues.serializers import LeagueSerializer, LeagueCreateSerializer
 # Create your views here.
 
 class LeagueViewSet(viewsets.ModelViewSet):
+    '''
+        This viewset allows to CRUD all the Leagues of the system.
+    '''
 
     queryset = League.objects.all().order_by('-id')
     serializer_class = LeagueSerializer

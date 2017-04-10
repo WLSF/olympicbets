@@ -11,7 +11,7 @@ from api.v1.accounts.serializers import AccountSerializer, TransactionSerializer
 
 class TransactionViewSet(viewsets.ModelViewSet):
     '''
-        Transaction ModelViewSet
+        This viewset allows to CRUD all the Transactions-Types of the system.
     '''
 
     queryset = Transaction.objects.all()
@@ -19,7 +19,7 @@ class TransactionViewSet(viewsets.ModelViewSet):
 
 class AccountViewSet(viewsets.ModelViewSet):
     '''
-        Account ModelViewSet
+        This viewset allows to CRUD all the Account-Transactions of the system.
     '''
 
     queryset = Account.objects.all()

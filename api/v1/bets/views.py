@@ -9,10 +9,17 @@ from .serializers import BetSerializer, BetTypeSerializer, BetCreateSerializer
 # Create your views here.
 
 class BetTypeViewSet(viewsets.ModelViewSet):
+    '''
+        This viewset allows to CRUD all the Bet-Types of the system.
+    '''
+
     queryset = BetType.objects.all().order_by('-id')
     serializer_class = BetTypeSerializer
 
 class BetViewSet(viewsets.ModelViewSet):
+    '''
+        This viewset allows to CRUD all the Bets of the system.
+    '''
 
     queryset = Bet.objects.all().order_by('-id')
     serializer_class = BetSerializer

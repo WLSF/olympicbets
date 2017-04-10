@@ -9,6 +9,9 @@ from api.v1.games.serializers import GameSerializer, GameCreateSerializer
 # Create your views here.
 
 class GameViewSet(viewsets.ModelViewSet):
+    '''
+        This viewset allows to CRUD all the Games of the system.
+    '''
 
     queryset = Game.objects.all().order_by('-id')
     serializer_class = GameSerializer
