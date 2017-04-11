@@ -1,0 +1,1 @@
+web: gunicorn olympicbets.wsgi --log-file -
