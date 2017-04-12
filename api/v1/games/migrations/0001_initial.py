@@ -23,14 +23,4 @@ class Migration(migrations.Migration):
                 ('updated_at', models.DateTimeField(auto_now=True)),
             ],
         ),
-        migrations.CreateModel(
-            name='GameTeams',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('game', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='games.Game')),
-                ('team', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='teams.Team')),
-            ],
-        ),
     ]

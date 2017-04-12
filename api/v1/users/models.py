@@ -4,6 +4,10 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
+class UserManager(models.Manager):
+    def get_queryset(self):
+        return super(UserManager, self).get_queryset().filter(role__nick='user')
+
 class Role(models.Model):
     '''
         This class will be responsible for recognize admins or common users
@@ -27,8 +31,8 @@ class User(AbstractUser):
 
     USERNAME_FIELD = 'username'
 
+    objects = models.Manager()
+    regular = UserManager()
+
     def has_role(self, name):
         return User.objects.get(id=self.pk).role.nick == name
-
-    def get_role(self):
-        return User.objects.get(id=self.pk).role.nick
