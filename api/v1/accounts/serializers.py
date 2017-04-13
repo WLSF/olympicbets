@@ -26,7 +26,6 @@ class AccountCreateSerializer(serializers.ModelSerializer):
         obj = Account.objects.add_credit(**validated_data)
         return obj
 
-
     class Meta:
         model = Account
         fields = ('id','receiver', 'value')
