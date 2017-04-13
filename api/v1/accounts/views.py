@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from rest_framework import viewsets, status
 from rest_framework.response import Response
+from rest_framework.decorators import detail_route
 
 from api.v1.accounts.models import Account, Transaction
 from api.v1.accounts.serializers import AccountSerializer, TransactionSerializer, AccountCreateSerializer
@@ -27,7 +28,7 @@ class AccountViewSet(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         self.serializer_class = AccountCreateSerializer
-        serializer = self.get_serializer(request.data)
+        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         headers = self.get_success_headers(serializer.data)

@@ -27,10 +27,7 @@ class Bet(models.Model):
 
     value = models.DecimalField(max_digits=10, decimal_places=2)
     odd = models.DecimalField(max_digits=4, decimal_places=2)
-    combined = models.CharField(max_length=50)
+    combined = models.CharField(max_length=50, null=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
-    objects = models.Manager()
-    concluded = ConcludedBetsManager()

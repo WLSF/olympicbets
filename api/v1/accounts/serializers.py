@@ -22,6 +22,11 @@ class AccountSerializer(serializers.ModelSerializer):
         fields = ('id', 'user', 'receiver', 'bet', 'transaction', 'description', 'history', 'value')
 
 class AccountCreateSerializer(serializers.ModelSerializer):
+    def create(self, validated_data):
+        obj = Account.objects.add_credit(**validated_data)
+        return obj
+
+
     class Meta:
         model = Account
-        fields = ('id', 'user', 'receiver', 'bet', 'transaction', 'description', 'history', 'value')
+        fields = ('id','receiver', 'value')

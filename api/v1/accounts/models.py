@@ -5,6 +5,19 @@ from api.v1.bets.models import Bet
 
 # Create your models here.
 
+class AccountManager(models.Manager):
+    def add_credit(self, value, receiver):
+        return Account.objects.create(
+            transaction_id=5,
+            bet=None,
+            description="Crédito inserido através de funções administrativas",
+            history=None,
+            user=User.objects.get(role__nick='admin'),
+            receiver=receiver,
+            value=value
+        )
+
+
 class Transaction(models.Model):
     '''
         Transaction type
@@ -31,3 +44,5 @@ class Account(models.Model):
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    objects = AccountManager()

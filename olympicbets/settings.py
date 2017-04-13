@@ -138,6 +138,7 @@ AUTH_USER_MODEL = 'users.User'
 
 FIXTURES_DIRS = (
     'api/v1/users/fixtures/',
+    'api/v1/accounts/fixtures/',
 )
 
 
