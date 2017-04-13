@@ -10,7 +10,7 @@ class AccountManager(models.Manager):
         return Account.objects.create(
             transaction_id=5,
             bet=None,
-            description="Crédito inserido através de funções administrativas",
+            description="Admin set money to User",
             history=None,
             user=User.objects.get(role__nick='admin'),
             receiver=receiver,

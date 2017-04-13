@@ -1,24 +1,24 @@
 - model: accounts.Transaction
   pk: 1
   fields:
-    name: Depósito
+    name: Deposit
 
 - model: accounts.Transaction
   pk: 2
   fields:
-    name: Saque
+    name: Withdraw
 
 - model: accounts.Transaction
   pk: 3
   fields: 
-    name: Extorno
+    name: Reversal
 
 - model: accounts.Transaction
   pk: 4
   fields: 
-    name: Aposta
+    name: Bet
 
 - model: accounts.Transaction
   pk: 5
   fields:
-    name: Crédito
+    name: Credit
